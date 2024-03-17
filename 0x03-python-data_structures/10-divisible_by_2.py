@@ -16,5 +16,5 @@ def divisible_by_2(my_list=[]):
             d_list.append(True)
         else:
             d_list.append(False)
-    
+
     return (d_list)

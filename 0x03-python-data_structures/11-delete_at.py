@@ -9,14 +9,9 @@ def delete_at(my_list=[], idx=0):
     the new modified list
     if idx is negative or out of range, the same list
     """
-    n_list = []
-
     if idx < 0 or idx > len(my_list):
         return (my_list)
-    else:
-        for n in range(len(my_list)):
-            if my_list[n] != my_list[idx]:
-                n_list.append(my_list[n])
-        del my_list[idx]
-        return (my_list)
+    
+    del my_list[idx]
+    return (my_list)
   

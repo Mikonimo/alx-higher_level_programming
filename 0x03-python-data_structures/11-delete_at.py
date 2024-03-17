@@ -9,7 +9,7 @@ def delete_at(my_list=[], idx=0):
     the new modified list
     if idx is negative or out of range, the same list
     """
-    if idx < 0 or idx > len(my_list):
+    if idx < 0 or idx >= len(my_list):
         return (my_list)
     
     del my_list[idx]

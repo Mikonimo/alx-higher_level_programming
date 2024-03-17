@@ -9,9 +9,9 @@ def multiple_returns(sentence):
     tuple with the length of a string and its first character
     """
     length = len(sentence)
-    char = sentence[0]
     if sentence == '':
         char = None
         return (length, char)
     else:
+        char = sentence[0]
         return (length, char)

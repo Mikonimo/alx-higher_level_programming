@@ -9,7 +9,7 @@ int check_cycle(listint_t *list)
 {
 	listint_t *first = list;
 	listint_t *last = list->next;
-
+c
 	if (list == NULL || last == NULL                                         )
 	{
 		return (0);

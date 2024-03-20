@@ -6,8 +6,8 @@ def best_score(a_dictionary):
     a_dictionary: the dictionary being evaluated
     Return: the key with the biggest integer
     """
-    best = 0
-    best_st = ""
+    best = float('-inf')
+    best_st = None
     if a_dictionary is None:
         return (None)
     for k, v in a_dictionary.items():

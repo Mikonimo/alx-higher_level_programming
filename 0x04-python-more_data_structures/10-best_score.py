@@ -8,11 +8,10 @@ def best_score(a_dictionary):
     """
     best = 0
     best_st = ""
-    if a_dictionary == None:
+    if a_dictionary is None:
         return (None)
     for k, v in a_dictionary.items():
         if v > best:
             best_st = k
             best = v
-
     return (best_st)

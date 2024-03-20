@@ -9,4 +9,4 @@ def common_elements(set_1, set_2):
     set of common elements from set_1 and set_2
     """
     com_set = set_1 & set_2
-    return(com_set)
+    return (com_set)

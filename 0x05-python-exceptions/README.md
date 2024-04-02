@@ -1,0 +1,1 @@
+Errors detected during execution are called exceptions and are not unconditionally fatal: are handled in python programs. Most exceptions are not handled by programs, however, and result in error messages.

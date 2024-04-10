@@ -3,7 +3,7 @@
 
 
 class Rectangle:
-    """An empty class Rectangle"""
+    """A class Rectangle"""
     def __init__(self, width=0, height=0):
         """
         Initializes a Rectangle instance with optional width and height.

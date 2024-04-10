@@ -4,6 +4,7 @@
 
 class Rectangle:
     """A class Rectangle"""
+
     def __init__(self, width=0, height=0):
         """
         Initializes a Rectangle instance with optional width and height.
@@ -89,4 +90,24 @@ class Rectangle:
         Returns:
             int: Perimeter of the rectangle.
         """
-        return 2 * (self.__width + self.__height)if self.__width != 0 and self.__height != 0 else 0
+        return 2 * (self.__width + self.__height) if self.__width != 0 and self.__height != 0 else 0
+
+    def __str__(self):
+        """
+        Returns a string representation of the rectangle.
+
+        Returns:
+            str: String representation of the rectangle.
+        """
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        return "\n".join(["#" * self.__width for _ in range(self.__height)])
+
+    def __repr__(self):
+        """
+        Returns a string representation of the rectangle object.
+
+        Returns:
+            str: String representation of the rectangle object.
+        """
+        return "Rectangle({}, {})".format(self.__width, self.__height)

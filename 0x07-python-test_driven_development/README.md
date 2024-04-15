@@ -1,0 +1,1 @@
+Test Driven Development: Doctest tests source code by running examples embedded in the documentation and verifying that they may produce the expected results. It works by parsing the help text to fnd examples, running them, then comparing the output text against the expected value.

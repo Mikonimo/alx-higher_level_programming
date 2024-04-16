@@ -7,7 +7,8 @@ class Square(Rectangle):
     """Class Square"""
     def __init__(self, size):
         """initializes class square"""
-        self.__size = self.integer_validator("size", size)
+        self.__size = size
+        self.integer_validator("size", size)
 
     def area(self):
         """Calculates the area of the square"""

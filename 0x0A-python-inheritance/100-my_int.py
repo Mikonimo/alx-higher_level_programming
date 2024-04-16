@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""Module that int behaves differently"""
+
+
 class MyInt(int):
+    """Class MyInt"""
     def __eq__(self, other):
         """
         Overrides the equality operator.

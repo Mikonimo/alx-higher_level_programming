@@ -12,8 +12,8 @@ class BaseGeometry:
         """
         Validates the value is an integer
         Args:
-            @name: always a string
-            @value: must be an integer
+            name: always a string
+            value: must be an integer
         """
         if (not isinstance(value, int)):
             raise TypeError("<name> must be an integer")

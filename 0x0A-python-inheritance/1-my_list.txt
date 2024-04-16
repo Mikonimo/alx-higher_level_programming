@@ -1,0 +1,16 @@
+#Import the class and the function
+>>> print_sorted  = __import__("1-my_list").MyList.print_sorted
+>>> My_List = __import__("1-my_list").MyList
+
+#Test Cases
+>>> empty_list = My_List()
+>>> print_sorted(empty_list)
+[]
+
+>>> dupl_list = My_List([1, 3, 3, 4, 4, 5, 2, 1])
+>>> print_sorted(dupl_list)
+[1, 1, 2, 3, 3, 4, 4, 5]
+
+>>> neg_llist = My_List([-1, -3, -33, 9, -5])
+>>> print_sorted(neg_llist)
+[-33, -5, -3, -1, 9]

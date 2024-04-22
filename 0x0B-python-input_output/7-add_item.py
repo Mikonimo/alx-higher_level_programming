@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """Contains a script that adds all arguements"""
-import sys
 
+
+import sys
 
 if __name__ == "__main__":
     save_to_json_file = __import__('5-save_to_json_file.py').save_to_json_file

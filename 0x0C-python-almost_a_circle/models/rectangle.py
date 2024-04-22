@@ -27,7 +27,7 @@ class Rectangle(Base):
             raise TypeError("width must be an integer")
 
         if value <= 0:
-            raise ValueError("width must be >= 0")
+            raise ValueError("width must be > 0")
         self.__width = value
 
     @property
@@ -42,7 +42,7 @@ class Rectangle(Base):
             raise TypeError("height must be an integer")
 
         if value <= 0:
-            raise ValueError("height must be >= 0")
+            raise ValueError("height must be > 0")
         self.__height = value
 
     @property
@@ -78,3 +78,14 @@ class Rectangle(Base):
     def area(self):
         """Calculates the area of the rectangle"""
         return (self.__height * self.__width)
+
+    def display(self):
+        """Displays the rectangle using # """
+        for y in range(self.y):
+            print("")
+        for h in range(self.__height):
+            for x in range(self.x):
+                print(" ", end="")
+            for w in range(self.__width):
+                print("#", end="")
+            print()

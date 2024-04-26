@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Tests for the Base class and its methods"""
+
 import unittest
 from models.base import Base
 

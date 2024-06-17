@@ -15,6 +15,7 @@ class TestRectangle(unittest.TestCase):
         """Tests for invalid arguments"""
         with self.assertRaises(ValueError):
             r1 = Rectangle(0, 5)
+            r2 = Rectangle(5, 0)
 
     # Add more test cases for other methods as needed
 

@@ -21,5 +21,9 @@ class Rectangle {
         this.weight = this.height;
         this.height = tmp;
     }
+    double() {
+        this.height *= 2;
+        this.weight *= 2;
+    }
   }
 module.exports = Rectangle;

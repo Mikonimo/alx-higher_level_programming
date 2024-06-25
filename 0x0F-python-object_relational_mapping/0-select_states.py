@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Lists all states from the database hbtn_0e_0_usa"""
-import MySQLdb # type: ignore
+import MySQLdb  # type: ignore
 import sys
 
 
@@ -24,6 +24,7 @@ def list_states(username, password, db_name):
 
     cursor.close()
     db.close
+
 
 if __name__ == "__main__":
     username = sys.argv[1]

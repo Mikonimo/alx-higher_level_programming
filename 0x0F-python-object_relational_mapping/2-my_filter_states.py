@@ -14,7 +14,7 @@ def match_state(username, password, db_name, state_name):
         db=db_name
     )
     cursor = db.cursor()
-    query = "SELECT id, name FROM state WHERE name = %s ORDER BY id ASC;"
+    query = "SELECT id, name FROM state WHERE name LIKE BINARY '{}' ORDER BY id ASC;"
     query = query.format(state_name)
     cursor.execute(query)
     results = cursor.fetchall()

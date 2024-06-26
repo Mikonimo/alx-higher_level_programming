@@ -15,13 +15,14 @@ def list_states_N(username, password, db_name):
     )
 
     cursor = db.cursor()
-    query = "SELECT id, name FROM states WHERE name LIKE 'N%' ORDER BY id ASC;"
+    query = "SELECT id, name FROM states ORDER BY id ASC;"
     cursor.execute(query)
 
     results = cursor.fetchall()
 
     for row in results:
-        print(row)
+        if row[1].startswith("N"):
+            print(row)
 
     cursor.close()
     db.close()

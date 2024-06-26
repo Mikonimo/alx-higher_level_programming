@@ -1,35 +1,19 @@
 #!/usr/bin/python3
-"""Matches an argument to its state"""
-import MySQLdb  # type: ignore
-import sys
+"""Lists states"""
 
-
-def match_state(username, password, db_name, state_name):
-    """Matches the name of the state"""
-    db = MySQLdb.connect(
-        host="localhost",
-        host=3306,
-        user=username,
-        passwd=password,
-        db=db_name
-    )
-    cursor = db.cursor()
-    query = "SELECT id, name FROM state WHERE name LIKE BINARY '{}' ORDER BY id ASC;"
-    query = query.format(sys.argv[4])
-    cursor.execute(query)
-    results = cursor.fetchall()
-
-    for row in results:
-        print(row)
-
-    cursor.close()
-    db.close()
-
+import MySQLdb
+from sys import argv
 
 if __name__ == "__main__":
-    username = sys.argv[1]
-    password = sys.argv[2]
-    db_name = sys.argv[3]
-    state_name = sys.argv[4]
-
-    match_state(username, password, db_name, state_name)
+    db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
+                           passwd=argv[2], db=argv[3], charset="utf8")
+    cursor = db.cursor()
+    query = """
+SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY states.id ASC"""
+    query = query.format(argv[4])
+    cursor.execute(query)
+    query_rows = cursor.fetchall()
+    for row in query_rows:
+        print(row)
+    cursor.close()
+    db.close()

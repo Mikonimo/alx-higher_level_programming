@@ -5,7 +5,7 @@ import MySQLdb  # type: ignore
 import sys
 
 
-def match_state(username, password, db_name, state_name)
+def match_state(username, password, db_name, state_name):
     """Matches the name of the state"""
     db = MySQLdb.connect(
         host="localhost",

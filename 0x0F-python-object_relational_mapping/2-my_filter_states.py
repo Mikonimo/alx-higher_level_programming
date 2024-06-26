@@ -12,7 +12,7 @@ def match_state(username, password, db_name, state_name):
         host=3306,
         user=username,
         passwd=password,
-        db = db_name
+        db=db_name
     )
     cursor = db.cursor()
     query = "SELECT id, name FROM state WHERE name = %s ORDER BY id ASC;"
@@ -24,6 +24,7 @@ def match_state(username, password, db_name, state_name):
 
     cursor.close()
     db.close()
+
 
 if __name__ == "__main__":
     username = sys.argv[1]

@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Takes an argument and displays all values in the states
-table where name matches the argument"""
+"""Matches an argument to its state"""
 import MySQLdb  # type: ignore
 import sys
 

@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """Lists all state objects that contain the 'a'"""
 from sys import argv
-import sqlalchemy
 from model_state import Base, State
-from sqlachemy import (create_engine)
+from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
 

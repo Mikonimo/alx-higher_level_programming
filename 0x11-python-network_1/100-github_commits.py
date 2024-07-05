@@ -3,6 +3,7 @@
 import requests
 import sys
 
+
 if __name__ == "__main__":
     repository = sys.argv[1]
     owner = sys.argv[2]

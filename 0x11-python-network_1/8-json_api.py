@@ -8,9 +8,10 @@ if __name__ == "__main__":
     letter = sys.argv[1] if len(sys.argv) > 1 else ""
 
     payload = {'q': letter}
+    url = 'http://0.0.0.0:5000/search_user'
 
     try:
-        response = requests.post('http://0.0.0.0:5000/search_user', data=payload)
+        response = requests.post(url, data=payload)
         json_data = response.json()
 
         if json_data:

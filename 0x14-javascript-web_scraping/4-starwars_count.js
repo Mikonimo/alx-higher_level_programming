@@ -4,9 +4,6 @@ const request = require('request');
 // Get the API URL from the command line arguments
 const apiUrl = process.argv[2];
 
-// Character ID for Wedge Antilles
-const wedgeAntillesId = 18;
-
 // Send a GET request to the API URL
 request.get(apiUrl, (error, response, body) => {
   if (error) {
@@ -18,7 +15,7 @@ request.get(apiUrl, (error, response, body) => {
     if (data.results) {
       // Filter the movies where Wedge Antilles is present
       const wedgeMovies = data.results.filter(film =>
-        film.characters.includes(`https://swapi-api.alx-tools.com/api/people/${wedgeAntillesId}/`)
+        film.characters.includes(`https://swapi-api.alx-tools.com/api/people/18/`)
       );
 
       // Print the number of movies

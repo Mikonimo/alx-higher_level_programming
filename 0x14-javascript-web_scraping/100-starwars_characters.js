@@ -4,12 +4,6 @@ const request = require('request');
 // Get the Movie ID from the command line arguments
 const movieId = process.argv[2];
 
-// Check if the Movie ID is provided
-if (!movieId) {
-  console.error('Please provide a Movie ID as the first argument.');
-  process.exit(1);
-}
-
 // Construct the URL for the API request
 const url = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
 

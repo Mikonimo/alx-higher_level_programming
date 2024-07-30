@@ -23,8 +23,6 @@ request.get(apiUrl, (error, response, body) => {
 
       // Print the number of movies
       console.log(wedgeMovies.length);
-    } else {
-      console.error('No movies found');
     }
   }
 });

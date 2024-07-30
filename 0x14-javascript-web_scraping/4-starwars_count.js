@@ -8,7 +8,10 @@ const apiUrl = process.argv[2];
 const wedgeAntillesId = 18;
 
 // Send a GET request to the API URL
-request.get(apiUrl, (response, body) => {
+request.get(apiUrl, (error, response, body) => {
+  if (error) {
+    console.error('Error:', error);
+  } else {
     // Parse the JSON response
     const data = JSON.parse(body);
     // Check if the results exist in the response
@@ -23,4 +26,5 @@ request.get(apiUrl, (response, body) => {
     } else {
       console.error('No movies found');
     }
+  }
 });

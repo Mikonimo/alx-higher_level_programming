@@ -4,7 +4,7 @@ $(document).ready(function () {
     const langCode = $('#language_code').val();
 
     // Fetch the translation from the API
-    $.getJSON('https://www.fourtonfish.com/hellosalut/hello/', { lang: langCode }, function (data) {
+    $.getJSON('https://hellosalut.stefanbohacek.dev/?lang=', { lang: langCode }, function (data) {
       // Update the div with the translated greeting
       $('#hello').text(data.hello);
     }).fail(function () {

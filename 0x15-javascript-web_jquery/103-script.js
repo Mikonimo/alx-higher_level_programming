@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     // Fetch the translation from the API
     $.getJSON('https://hellosalut.stefanbohacek.dev/?lang=' + langCode, function (data) {
-      $('#hello').text(data.hello);
+      $('#hello').html(data.hello);
     }).fail(function () {
       $('#hello').text('Error: Could not fetch translation');
     });

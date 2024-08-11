@@ -6,7 +6,7 @@ $(document).ready(function () {
     // Fetch the translation from the API
     $.getJSON('https://hellosalut.stefanbohacek.dev/?lang=' + langCode, function (data) {
       // Update the div with the translated greeting
-      $('#hello').text(data.hello);
+      $('#hello').html(data.hello);
     }).fail(function () {
       // Handle errors (e.g., invalid language code)
       $('#hello').text('Error: Could not fetch translation');
